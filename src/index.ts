@@ -1,3 +1,5 @@
+import Simulation from "./classes/Logic/Simulation.js";
 import objList from "./startConfig.js";
 
-console.log(objList);
+let simulation = Simulation.instance;
+simulation.objList = objList;

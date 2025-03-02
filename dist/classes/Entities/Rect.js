@@ -1,4 +1,4 @@
-import Obj from "./Entities/Obj.js";
+import Obj from "./Obj.js";
 export default class Rect extends Obj {
     set width(value) { this._width = value; }
     get width() {
@@ -34,3 +34,4 @@ export default class Rect extends Obj {
         super.htmlObj.style.transform = "rotate(" + this._angle + "deg)";
     }
 }
+//# sourceMappingURL=Rect.js.map

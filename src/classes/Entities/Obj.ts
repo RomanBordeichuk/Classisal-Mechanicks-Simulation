@@ -1,5 +1,5 @@
-import { htmlObjList } from "../static.js";
 import Structure from "./Structure.js";
+import { htmlObjList } from "../../static.js";
 
 export default abstract class Obj extends Structure{
     private _x?: number;
@@ -33,11 +33,15 @@ export default abstract class Obj extends Structure{
     }
 
     setHtmlObjPos(){
-        this._htmlObj.style.left = this._x + "px";
-        this._htmlObj.style.top = this._y + "px";
+        this._htmlObj.style.left = this.x + "px";
+        this._htmlObj.style.top = this.y + "px";
     }
 
     buildHtmlObj(){
         htmlObjList?.append(this._htmlObj);
+    }
+
+    updateHtmlObj(){
+        this.setHtmlObjPos();
     }
 }

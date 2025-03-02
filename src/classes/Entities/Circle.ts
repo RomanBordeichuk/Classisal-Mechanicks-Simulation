@@ -15,14 +15,19 @@ export default class Circle extends Obj{
     }
 
     setHtmlObjPos(){
-        if(this._r === undefined) throw new Error("_r is not defined");
-
-        super.htmlObj.style.left = super.x - this._r / 2 + "px";
-        super.htmlObj.style.top = super.y - this._r / 2 + "px";
+        super.htmlObj.style.left = super.x - this.r + "px";
+        super.htmlObj.style.top = super.y - this.r + "px";
     }
 
     setCircleR(){
-        super.htmlObj.style.width = this._r + "px";
-        super.htmlObj.style.height = this._r + "px";
+        super.htmlObj.style.width = this.r * 2 + "px";
+        super.htmlObj.style.height = this.r * 2 + "px";
+    }
+
+    calcMass(){
+        if(super.pinned == true) return;
+        
+        let area = Math.PI * this.r ** 2;
+        super.m = super.density * area;
     }
 }

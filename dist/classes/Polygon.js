@@ -1,5 +1,5 @@
-import Structure from "./Structure.js";
-import Point from "./Point.js";
+import Structure from "./Entities/Structure.js";
+import Point from "./Entities/Point.js";
 import { rectBuilder } from "../static.js";
 export default class Polygon extends Structure {
     set thickness(value) { this._thickness = value; }
