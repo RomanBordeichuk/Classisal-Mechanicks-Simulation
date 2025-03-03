@@ -21,6 +21,11 @@ export default class Polygon extends Structure{
         return a + b;
     }
 
+    anotherNewMethod(value: number | undefined){
+        if(value === undefined) throw new Error("incorrect value catched");
+        return value;
+    }
+
     setNewPoint(x: number, y: number){
         this._pointsList?.push(new Point(x, y));
     }
