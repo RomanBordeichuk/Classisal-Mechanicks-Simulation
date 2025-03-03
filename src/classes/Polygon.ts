@@ -15,6 +15,12 @@ export default class Polygon extends Structure{
         super();
     }
 
+    someNewMethod(){
+        let a = 1;
+        let b = 2;
+        return a + b;
+    }
+
     setNewPoint(x: number, y: number){
         this._pointsList?.push(new Point(x, y));
     }
