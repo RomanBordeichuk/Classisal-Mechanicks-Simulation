@@ -15,17 +15,6 @@ export default class Polygon extends Structure{
         super();
     }
 
-    someNewMethod(){
-        let a = 1;
-        let b = 2;
-        return a + b;
-    }
-
-    anotherNewMethod(value: number | undefined){
-        if(value === undefined) throw new Error("incorrect value catched");
-        return value;
-    }
-
     setNewPoint(x: number, y: number){
         this._pointsList?.push(new Point(x, y));
     }
